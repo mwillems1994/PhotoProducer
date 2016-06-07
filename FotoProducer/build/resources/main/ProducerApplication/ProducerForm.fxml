@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="709.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ProducerApplication.ProducerFormController">
+  <children>
+    <TabPane layoutY="6.0" prefHeight="393.0" prefWidth="709.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Add Product">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="519.0">
+              <children>
+                <TextField fx:id="tfName" layoutX="255.0" layoutY="53.0" prefHeight="25.0" prefWidth="284.0" />
+                <Label id="lblName" layoutX="135.0" layoutY="58.0" text="Name:" />
+                <Label id="lblDescription" layoutX="99.0" layoutY="121.0" text="Description:" />
+                <TextArea id="TaDescription" fx:id="taDescription" layoutX="255.0" layoutY="98.0" prefHeight="66.0" prefWidth="286.0" />
+                <Button fx:id="btnAddProduct" layoutX="431.0" layoutY="316.0" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
+                <ListView fx:id="lvProducts" layoutX="254.0" layoutY="223.0" prefHeight="85.0" prefWidth="286.0" />
+                <Label layoutX="116.0" layoutY="255.0" text="Products:" />
+                <TextField fx:id="tfProductPrice" layoutX="254.0" layoutY="182.0" onKeyReleased="#addProductTextEdited" prefHeight="25.0" prefWidth="286.0" />
+                <Label layoutX="142.0" layoutY="187.0" text="Price:" />
+                <Label fx:id="lblErrorAddProduct" layoutX="92.0" layoutY="321.0" prefHeight="21.0" prefWidth="327.0" textFill="RED" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Add Pictures">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="594.0">
+              <children>
+                <Pane layoutX="14.0" layoutY="14.0" prefHeight="166.0" prefWidth="341.0">
+                  <children>
+                    <ComboBox id="CbPhotographer" fx:id="cbPhotographer" layoutX="14.0" layoutY="30.0" prefHeight="25.0" prefWidth="186.0" promptText="Select Photographer" />
+                    <ComboBox fx:id="cbAlbum" layoutX="14.0" layoutY="61.0" prefHeight="25.0" prefWidth="186.0" promptText="Select Album" />
+                    <TextField id="TfPath" fx:id="tfPath" editable="false" layoutX="14.0" layoutY="96.0" prefHeight="25.0" prefWidth="186.0" text="C:\" />
+                    <Button fx:id="btnSelect" layoutX="211.0" layoutY="94.0" mnemonicParsing="false" onAction="#selectPicture" prefHeight="25.0" prefWidth="95.0" text="Select" />
+                    <Button fx:id="btnAdd" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onAction="#addPicture" prefHeight="26.951171875" prefWidth="186.0" text="Add Picture" />
+                    <Label layoutX="14.0" layoutY="10.0" text="Add photos to existing album" />
+                  </children>
+                </Pane>
+                <Pane layoutX="356.0" layoutY="14.0" prefHeight="161.0" prefWidth="341.0">
+                  <children>
+                    <ComboBox id="CbPhotographer" fx:id="cbPhotographerNewAlbum" layoutX="21.0" layoutY="36.0" prefHeight="25.0" prefWidth="197.0" promptText="Select Photographer" />
+                    <TextField id="newAlbumName" fx:id="tfAlbumName" layoutX="21.0" layoutY="68.0" prefWidth="200.0" promptText="Album name" />
+                    <Button fx:id="btNewAlbum" layoutX="21.0" layoutY="102.0" mnemonicParsing="false" onAction="#btNewAlbum" prefWidth="160.0" text="Create new Album" />
+                    <Label fx:id="lbWarning" layoutX="22.0" layoutY="135.0" prefWidth="305.0" text="Label" textFill="RED" visible="false" />
+                    <Label id="lbWarning" fx:id="lbWarning2" layoutX="22.0" layoutY="135.0" prefWidth="305.0" text="Label" visible="false">
+                      <textFill>
+                        <Color blue="0.000" green="1.000" red="0.078" fx:id="x1" />
+                      </textFill>
+                    </Label>
+                  </children>
+                </Pane>
+                <Label layoutX="376.0" layoutY="24.0" text="Create new album" />
+                <Pane layoutX="355.0" layoutY="166.0" prefHeight="172.0" prefWidth="341.0">
+                  <children>
+                    <ComboBox id="CbPhotographer" fx:id="cbPhotographerAssign" layoutX="21.0" layoutY="20.0" prefHeight="25.0" prefWidth="197.0" promptText="Select Photographer" />
+                    <Button id="btNewAlbum" fx:id="btAssignCustomertoAlbum" layoutX="21.0" layoutY="119.0" mnemonicParsing="false" onAction="#AssignCustomertoAlbum" prefWidth="197.0" text="Assign client to album" />
+                    <Label layoutX="22.0" layoutY="0.0" text="Assign client to Album" />
+                    <ComboBox id="cbAlbum" fx:id="cbAlbumAssign" layoutX="21.0" layoutY="53.0" prefHeight="25.0" prefWidth="197.0" promptText="Select Album" />
+                    <ComboBox id="cbAlbum" fx:id="cbClient" layoutX="21.0" layoutY="86.0" prefHeight="25.0" prefWidth="197.0" promptText="Select Client" />
+                    <Label id="lbWarning" fx:id="lbAssignWarning" layoutX="22.0" layoutY="153.0" prefWidth="315.0" text="Er is iets fout gegaan." textFill="RED" visible="false" />
+                    <Label id="lbWarning" fx:id="lbAssignWarning2" layoutX="21.0" layoutY="153.0" prefWidth="316.0" text="Client succesvol gekoppeld." textFill="$x1" visible="false" />
+                  </children>
+                </Pane>
+                <Pane layoutX="28.0" layoutY="190.0" prefHeight="134.0" prefWidth="326.5">
+                  <children>
+                    <Label id="lbWarning" fx:id="lbCreateClientSucces" layoutX="0.0" layoutY="78.0" prefWidth="305.0" text="Client succesvol toegevoegd" textFill="$x1" visible="false" />
+                    <Button id="btNewAlbum" fx:id="btAddClient" layoutX="0.0" layoutY="48.0" mnemonicParsing="false" onAction="#createClient" prefWidth="186.0" text="Create new client" />
+                    <Label id="lbWarning" fx:id="lbCreateClientWarning" layoutX="0.0" layoutY="78.0" prefWidth="305.0" text="Er is iets fout gegaan." textFill="RED" visible="false" />
+                    <Label id="lbCreateClientSucces" layoutX="0.0" layoutY="-5.0" text="Create new client" />
+                    <TextField id="newAlbumName" fx:id="tfClientName" layoutX="0.0" layoutY="14.0" prefWidth="185.99990000000253" promptText="Client name" />
+                  </children>
+                </Pane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Orders">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="351.0" prefWidth="742.0">
+              <children>
+                <TableView fx:id="tbOrders" layoutX="12.0" layoutY="40.0" onMousePressed="#specifyProducts" prefHeight="249.0" prefWidth="300.0" />
+                <TableView fx:id="tbOrderProducts" layoutX="329.0" layoutY="40.0" onMouseClicked="#specifyProducts" prefHeight="251.0" prefWidth="375.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Change prices">
+          <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label fx:id="lblSuccesPrice" layoutX="14.0" layoutY="314.0" text="Label" textFill="#1fab02" />
+                <Label fx:id="lblErrorPrice" layoutX="14.0" layoutY="314.0" text="Label" textFill="RED" />
+                <TextField fx:id="tfNewPrice" layoutX="460.0" layoutY="309.0" onKeyReleased="#updatePriceTextEdited" prefHeight="31.0" prefWidth="107.0" />
+                <Label fx:id="lblNewPrice" layoutX="379.0" layoutY="314.0" text="New price" />
+                <Label fx:id="lblSelectProduct" layoutX="14.0" layoutY="10.0" prefHeight="21.0" prefWidth="122.0" text="Select a product" />
+                <Button fx:id="btnChangePrice" layoutX="588.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnChangePrice" text="Change Price" />
+                <TableView fx:id="tvProductPrices" layoutX="14.0" layoutY="35.0" onMouseClicked="#listViewPricesClicked" prefHeight="269.0" prefWidth="680.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>

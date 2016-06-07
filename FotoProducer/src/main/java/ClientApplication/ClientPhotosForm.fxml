@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientApplication.ClientPhotosFormController">
+   <children>
+      <Button fx:id="btCart" layoutX="484.0" layoutY="14.0" mnemonicParsing="false" onAction="#showCart" text="Winkelwagen" />
+      <Button fx:id="btInCart" layoutX="470.0" layoutY="355.0" mnemonicParsing="false" onAction="#inCart" text="In winkelwagen" />
+      <Button fx:id="btProduct" layoutX="342.0" layoutY="355.0" mnemonicParsing="false" onAction="#onProduct" text="On Product" />
+      <ImageView fx:id="ivPicture" fitHeight="253.0" fitWidth="550.0" layoutX="25.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lbError" layoutX="267.0" layoutY="19.0" prefHeight="21.0" prefWidth="202.0" text="Geen afbeelding beschikbaar" textFill="RED" />
+      <ComboBox fx:id="cbOptions" layoutX="41.0" layoutY="349.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

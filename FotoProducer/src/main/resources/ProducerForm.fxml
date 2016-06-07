@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="336.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutY="6.0" prefHeight="393.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Product">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="519.0">
+                     <children>
+                        <TextField id="tfName" fx:id="tfName" layoutX="101.0" layoutY="53.0" prefHeight="25.0" prefWidth="284.0" />
+                        <Label id="lblName" layoutX="42.0" layoutY="57.0" text="Name:" />
+                        <Label id="lblDescription" layoutX="14.0" layoutY="98.0" text="Description:" />
+                        <TextArea id="TaDescription" fx:id="taDescription" layoutX="101.0" layoutY="98.0" prefHeight="200.0" prefWidth="286.0" />
+                        <Button id="btnAddProduct" fx:id="btnAddProduct" layoutX="306.0" layoutY="316.0" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Pictures">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="594.0">
+                     <children>
+                        <ComboBox id="CbPhotographer" fx:id="cbPhotographer" layoutX="64.0" layoutY="90.0" prefHeight="25.0" prefWidth="160.0" promptText="Select Photographer" />
+                        <TextField id="TfPath" fx:id="tfPath" layoutX="66.0" layoutY="145.0" prefHeight="25.0" prefWidth="157.0" text="C:\" />
+                        <Button id="btnSelect" fx:id="btnSelect" layoutX="253.0" layoutY="145.0" mnemonicParsing="false" onAction="#selectPicture" prefHeight="25.0" prefWidth="95.0" text="Select" />
+                        <Button id="btnAdd" fx:id="btnAdd" layoutX="97.0" layoutY="208.0" mnemonicParsing="false" onAction="#addPicture" prefHeight="25.0" prefWidth="94.0" text="Add Picture" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Orders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button id="btnPrint" fx:id="btnPrint" layoutX="286.0" layoutY="325.0" mnemonicParsing="false" onAction="#printOrders" prefHeight="25.0" prefWidth="79.0" text="Print" />
+                        <ListView id="LvOrders" fx:id="lvOrders" layoutX="34.0" layoutY="26.0" prefHeight="280.0" prefWidth="331.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

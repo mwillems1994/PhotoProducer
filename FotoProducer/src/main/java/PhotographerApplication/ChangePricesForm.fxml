@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="410.9998779296875" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PhotographerApplication.ChangePricesFormController">
+  <tabs>
+    <Tab closable="false" text="Pricelist">
+      <content>
+        <AnchorPane id="AnchorPane" prefHeight="382.0" prefWidth="579.0">
+          <children>
+            <Button fx:id="btnChangePrice" layoutX="562.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnChangeProfitPriceClicked" text="Change Price" />
+            <Label fx:id="lblSelectProduct" layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="122.0" text="Select a product" />
+            <Label fx:id="lblNewPrice" layoutX="214.0" layoutY="330.0" text="New (profit)price: " />
+            <TextField fx:id="tfNewPrice" layoutX="341.0" layoutY="325.0" onKeyReleased="#updateTotalPrice" prefHeight="31.0" prefWidth="107.0" />
+            <Label fx:id="lblError" layoutX="293.0" layoutY="354.0" text="Label" textFill="RED" />
+            <Label fx:id="lblTotal" layoutX="464.0" layoutY="330.0" text="Total:" />
+            <Label fx:id="lblTotalPrice" layoutX="509.0" layoutY="330.0" text="xx " />
+            <Label fx:id="lblSucces" layoutX="122.0" layoutY="354.0" text="Label" textFill="#1fab02" />
+            <TableView fx:id="tvProductPrices" layoutX="7.0" layoutY="40.0" onMouseClicked="#listViewClicked" prefHeight="285.0" prefWidth="777.0" />
+            <TabPane layoutX="-229.0" layoutY="-29.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Untitled Tab 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab text="Untitled Tab 2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab closable="false" text="Orders">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="404.0" prefWidth="814.0">
+          <children>
+            <TableView fx:id="tbOrders" layoutX="51.0" layoutY="54.0" onMouseClicked="#specifyProducts" prefHeight="275.0" prefWidth="344.0" />
+            <TableView fx:id="tbProducts" layoutX="423.0" layoutY="54.0" prefHeight="275.0" prefWidth="329.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

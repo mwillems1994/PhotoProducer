@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientApplication.PhotosOverviewFormController">
+   <children>
+      <ComboBox fx:id="cbAlbums" layoutX="78.0" layoutY="22.0" prefWidth="150.0" />
+      <ScrollPane fx:id="pane" layoutX="11.0" layoutY="55.0" prefHeight="342.0" prefWidth="581.0">
+         <content>
+            <SwingNode fx:id="swingNode" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="42.0" layoutY="17.0" />
+      <Label layoutX="14.0" layoutY="26.0" text="album:" />
+      <Button fx:id="btCart" layoutX="548.0" layoutY="22.0" mnemonicParsing="false" onAction="#showCart" text="Cart" />
+      <Label fx:id="lbError" layoutX="257.0" layoutY="26.0" text="Connection error" textFill="RED" />
+   </children>
+</AnchorPane>

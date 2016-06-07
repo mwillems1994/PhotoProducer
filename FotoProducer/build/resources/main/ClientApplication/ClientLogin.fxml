@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="201.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientApplication.ClientLoginController">
+   <children>
+      <TextField fx:id="tfLoginCode" layoutX="80.0" layoutY="70.0" promptText="Enter your code here" />
+      <Button fx:id="btnLogin" layoutX="145.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnLoginClick" text="Login" />
+      <Label fx:id="lblError" layoutX="142.0" layoutY="166.0" textFill="RED" />
+      <ComboBox fx:id="cbLanguage" layoutX="125.0" layoutY="25.0" onAction="#checkLanguage" prefHeight="31.0" prefWidth="142.0" />
+      <Label fx:id="lblLanguage" layoutX="14.0" layoutY="30.0" text="select language:" />
+   </children>
+</AnchorPane>

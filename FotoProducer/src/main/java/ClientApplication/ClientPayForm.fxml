@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientApplication.ClientPayFormController">
+   <children>
+      <Button fx:id="btnBack" layoutX="526.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" prefWidth="60.0" text="Back" />
+      <Button fx:id="btnPay" layoutX="526.0" layoutY="318.0" mnemonicParsing="false" onAction="#OpenPayment" prefWidth="60.0" text="Pay" />
+      <ComboBox fx:id="cbPayMethod" layoutX="125.0" layoutY="318.0" onAction="#cbPaymentMethodSelect" prefWidth="150.0" />
+      <Label fx:id="lblPayMethod" layoutX="13.0" layoutY="323.0" text="Betaalmethode:" />
+      <Label fx:id="lblBank" layoutX="318.0" layoutY="323.0" text="Bank:" />
+      <ComboBox fx:id="cbBank" layoutX="364.0" layoutY="318.0" prefWidth="150.0" />
+      <TableView fx:id="tvCartItems" layoutX="17.0" layoutY="45.0" prefHeight="272.0" prefWidth="569.0" />
+   </children>
+</AnchorPane>
