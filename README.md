@@ -1,4 +1,5 @@
 # PhotoProducer
+Still a work in progress
 This is a school project where i participated in.
 
 Below you can see a list of classes which i have made. 
